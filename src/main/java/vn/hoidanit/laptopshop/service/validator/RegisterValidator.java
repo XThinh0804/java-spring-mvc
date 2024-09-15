@@ -9,6 +9,7 @@ import vn.hoidanit.laptopshop.service.UserService;
 
 @Service
 public class RegisterValidator implements ConstraintValidator<RegisterChecked, RegisterDTO> {
+
     private final UserService userService;
 
     public RegisterValidator(UserService userService) {

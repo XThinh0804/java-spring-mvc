@@ -10,7 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
                 <meta name="author" content="Hỏi Dân IT" />
-                <title>Update User - LaptopShop</title>
+                <title>Update User - Hỏi Dân IT</title>
                 <link href="/css/styles.css" rel="stylesheet" />
 
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -33,7 +33,8 @@
                                         <div class="col-md-6 col-12 mx-auto">
                                             <h3>Update a user</h3>
                                             <hr />
-                                            <form:form method="post" action="/admin/user/update" modelAttribute="user">
+                                            <form:form method="post" action="/admin/user/update"
+                                                modelAttribute="newUser">
 
                                                 <div class="mb-3" style="display: none;">
                                                     <label class="form-label">Id:</label>

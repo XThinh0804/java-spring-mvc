@@ -41,7 +41,7 @@
                                                 Are you sure to delete this product ?
                                             </div>
                                             <form:form method="post" action="/admin/product/delete"
-                                                modelAttribute="product">
+                                                modelAttribute="newProduct">
                                                 <div class="mb-3" style="display: none;">
                                                     <label class="form-label">Id:</label>
                                                     <form:input value="${id}" type="text" class="form-control"

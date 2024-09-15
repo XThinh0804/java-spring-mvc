@@ -13,9 +13,10 @@ public class RegisterDTO {
 
     @Email(message = "Email không hợp lệ", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;
+
     private String password;
 
-    @Size(min = 3, message = "ConfirmPassword phải có tối thiểu 3 ký tự")
+    @Size(min = 3, message = "confirmPassword phải có tối thiểu 3 ký tự")
     private String confirmPassword;
 
     public String getFirstName() {

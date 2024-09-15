@@ -10,7 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
                 <meta name="author" content="Hỏi Dân IT" />
-                <title>Delete User - LaptopShop</title>
+                <title>Delete User - Hỏi Dân IT</title>
                 <link href="/css/styles.css" rel="stylesheet" />
 
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -39,7 +39,8 @@
                                             <div class="alert alert-danger">
                                                 Are you sure to delete this user ?
                                             </div>
-                                            <form:form method="post" action="/admin/user/delete" modelAttribute="user">
+                                            <form:form method="post" action="/admin/user/delete"
+                                                modelAttribute="newUser">
                                                 <div class="mb-3" style="display: none;">
                                                     <label class="form-label">Id:</label>
                                                     <form:input value="${id}" type="text" class="form-control"

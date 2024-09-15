@@ -15,11 +15,11 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                 <script>
                     $(document).ready(() => {
-                        const avatarFile = $("#imageFile");
+                        const avatarFile = $("#avatarFile");
                         avatarFile.change(function (e) {
                             const imgURL = URL.createObjectURL(e.target.files[0]);
-                            $("#imagePreview").attr("src", imgURL);
-                            $("#imagePreview").css({ "display": "block" });
+                            $("#avatarPreview").attr("src", imgURL);
+                            $("#avatarPreview").css({ "display": "block" });
                         });
                     });
                 </script>
@@ -122,13 +122,13 @@
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
-                                                    <label for="imageFile" class="form-label">Image:</label>
-                                                    <input class="form-control" type="file" id="imageFile"
-                                                        accept=".png, .jpg, .jpeg" name="imageFile" />
+                                                    <label for="avatarFile" class="form-label">Image:</label>
+                                                    <input class="form-control" type="file" id="avatarFile"
+                                                        accept=".png, .jpg, .jpeg" name="hoidanitFile" />
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <img style="max-height: 250px; display: none;" alt="image preview"
-                                                        id="imagePreview" />
+                                                    <img style="max-height: 250px; display: none;" alt="avatar preview"
+                                                        id="avatarPreview" />
                                                 </div>
                                                 <div class="col-12 mb-5">
                                                     <button type="submit" class="btn btn-primary">Create</button>

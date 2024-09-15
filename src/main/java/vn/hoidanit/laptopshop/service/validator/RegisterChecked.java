@@ -10,7 +10,7 @@ import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
 @Constraint(validatedBy = RegisterValidator.class)
-@Target({ ElementType.TYPE }) // Adjusted to apply to the class level (phạm vi sử dụng là class)
+@Target({ ElementType.TYPE }) // Adjusted to apply to the class level
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface RegisterChecked {

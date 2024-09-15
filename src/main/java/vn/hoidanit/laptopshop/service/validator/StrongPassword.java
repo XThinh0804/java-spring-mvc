@@ -10,7 +10,7 @@ import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
 @Constraint(validatedBy = StrongPasswordValidator.class)
-@Target({ ElementType.METHOD, ElementType.FIELD }) // Phạm vi sử dụng ( ở đây phạm vi sử dụng là ở method và field)
+@Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface StrongPassword {

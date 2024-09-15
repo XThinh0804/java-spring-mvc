@@ -18,18 +18,18 @@
 
                 <script>
                     $(document).ready(() => {
-                        const imageFile = $("#imageFile");
-                        const orgImage = "${product.image}";
+                        const avatarFile = $("#avatarFile");
+                        const orgImage = "${newProduct.image}";
                         if (orgImage) {
                             const urlImage = "/images/product/" + orgImage;
-                            $("#imagePreview").attr("src", urlImage);
-                            $("#imagePreview").css({ "display": "block" });
+                            $("#avatarPreview").attr("src", urlImage);
+                            $("#avatarPreview").css({ "display": "block" });
                         }
 
-                        imageFile.change(function (e) {
+                        avatarFile.change(function (e) {
                             const imgURL = URL.createObjectURL(e.target.files[0]);
-                            $("#imagePreview").attr("src", imgURL);
-                            $("#imagePreview").css({ "display": "block" });
+                            $("#avatarPreview").attr("src", imgURL);
+                            $("#avatarPreview").css({ "display": "block" });
                         });
                     });
                 </script>
@@ -55,7 +55,7 @@
                                             <h3>Update a product</h3>
                                             <hr />
                                             <form:form method="post" action="/admin/product/update" class="row"
-                                                enctype="multipart/form-data" modelAttribute="product">
+                                                enctype="multipart/form-data" modelAttribute="newProduct">
                                                 <c:set var="errorName">
                                                     <form:errors path="name" cssClass="invalid-feedback" />
                                                 </c:set>
@@ -137,16 +137,15 @@
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
-                                                    <label for="imageFile" class="form-label">Image:</label>
-                                                    <input class="form-control" type="file" id="imageFile"
-                                                        accept=".png, .jpg, .jpeg" name="imageFile" />
+                                                    <label for="avatarFile" class="form-label">Image:</label>
+                                                    <input class="form-control" type="file" id="avatarFile"
+                                                        accept=".png, .jpg, .jpeg" name="hoidanitFile" />
                                                 </div>
                                                 <div class="col-12 mb-3">
-                                                    <img style="max-height: 250px; display: none;" alt="image preview"
-                                                        id="imagePreview" />
+                                                    <img style="max-height: 250px; display: none;" alt="avatar preview"
+                                                        id="avatarPreview" />
                                                 </div>
                                                 <div class="col-12 mb-5">
-                                                    <a href="/admin/product" class="btn btn-warning">Back</a>
                                                     <button type="submit" class="btn btn-warning">Update</button>
                                                 </div>
                                             </form:form>
