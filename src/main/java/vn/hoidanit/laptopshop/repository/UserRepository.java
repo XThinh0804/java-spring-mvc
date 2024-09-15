@@ -10,11 +10,15 @@ import vn.hoidanit.laptopshop.domain.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User save(User user);
 
-    List<User> findByEmail(String email);
+    List<User> findAllByEmail(String email);
 
     List<User> findAll();
 
     User findById(long id);
 
     void deleteById(long id);
+
+    boolean existsByEmail(String email);// Tìm xem trong database có xuất hiện email nhập vào hay không
+
+    User findByEmail(String email);
 }

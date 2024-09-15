@@ -19,6 +19,10 @@ public class UploadService {
     }
 
     public String handleSaveUploadFile(MultipartFile file, String targetFolder) {
+        // Xử lý người dùng không upload file
+        if (file.isEmpty()) {
+            return "";
+        }
         // this.servletContext.getRealPath trỏ đến mục webapp trong project
         String rootPath = this.servletContext.getRealPath("/resources/images");
         String finalName = "";
